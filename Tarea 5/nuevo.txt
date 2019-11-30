@@ -1,0 +1,12 @@
+digraph G{ 
+node [margin=0 ranksep="0.1", nodesep="0.1" width="0.1" height="0.1" shape=Square style=filled]
+Raiz[label="Raiz" group=0]
+Raiz->lunes
+Raiz->7
+7->8
+8->17
+17->20
+lunes->martes[group=0]
+martes->viernes[group=1]
+{rank=same;Raiz;lunes;martes;viernes}
+}

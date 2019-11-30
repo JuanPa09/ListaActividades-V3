@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Matriz.cpp"
 #include "caragaMasiva.cpp"
+#include "Grafica.cpp"
 
 using namespace std;
 
@@ -69,7 +70,8 @@ class Menu{
         cout<<"1. Ingresar actividad\n";
         cout<<"2. Imprimir actividad\n";
         cout<<"3. Carga Masiva\n";
-        cout<<"4. Salir\n";
+        cout<<"4. Graficar\n";
+        cout<<"5. Salir\n";
         cin>>respuesta;
         if (respuesta=="1")
         {
@@ -78,7 +80,10 @@ class Menu{
             impresion();
         }else if(respuesta=="3"){
             cargamasiva();
-        }else if(respuesta=="4") {
+        }else if(respuesta=="4"){
+            Graficar graph(matrix);
+            graph.graphMatriz();
+        }else if(respuesta=="5") {
             exit(0);
         }else{
             menu();
